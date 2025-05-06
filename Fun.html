@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Have fun</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .music {
+        padding: 5rem 4rem 5rem 4rem;
+        text-align: center;
+        align-items: center;
+      }
+
+      .daftar-music {
+        padding: 0;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .song {
+        width: 100%;
+      }
+
+      .music-items {
+        gap: 10px;
+        display: flex;
+        padding: 10px;
+        width: 800px;
+        border-radius: 20px;
+      }
+
+      .img-music {
+        border-radius: 7px;
+        width: 120px;
+        height: 120px;
+      }
+
+      .singer {
+        margin-bottom: 15px;
+      }
+
+      .video {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding: 5rem 4rem 5rem 4rem;
+        text-align: center;
+        align-items: center;
+      }
+
+      .video-items {
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        width: 650px;
+      }
+
+      figcaption {
+        color: black;
+      }
+
+      audio {
+        width: 100%;
+      }
+
+      video {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a onclick="home()">
+        <img
+          class="logo"
+          src="Logo Akprind University.png"
+          alt="AKPRIND University"
+        />
+      </a>
+
+      <div id="menu-icon" class="menu-icon">
+        <i class="ph ph-list"></i>
+      </div>
+
+      <ul id="menu-list" class="hidden">
+        <li>
+          <a onclick="home()" style="color: #0ef">Home</a>
+        </li>
+
+        <li>
+          <a onclick="biodata()">Biodata</a>
+        </li>
+        <li>
+          <a onclick="family()">Family</a>
+        </li>
+        <li>
+          <a onclick="program()">Program</a>
+        </li>
+        <li>
+          <a onclick="fun()">Fun</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="pilihan">
+      <button class="button-1" onclick="music()">Music</button>
+
+      <button class="button-1" onclick="video()">Video</button>
+    </section>
+
+    <section id="music" class="music">
+      <div class="daftar-music">
+        <div class="music-items" style="background: rgb(95, 61, 13)">
+          <img
+            class="img-music"
+            src="Poster Rewrite The Stars.jpg"
+            alt="Image"
+          />
+          <figure class="song">
+            <figcaption>Rewrite The Stars</figcaption>
+            <figcaption>
+              <p class="singer">James Arthur feat. Anne Marie</p>
+            </figcaption>
+            <audio controls>
+              <source
+                src="Music Rewrite The Stars James Arthur feat. Anne Marie (256k).ogg"
+                type="audio/ogg"
+              />
+              <source
+                src="Music Rewrite The Stars James Arthur feat. Anne Marie (256k).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </figure>
+        </div>
+        <div class="music-items" style="background: rgb(68, 68, 68)">
+          <img class="img-music" src="Poster See You Again.png" alt="Image" />
+          <figure class="song">
+            <figcaption>See You Again</figcaption>
+            <figcaption>
+              <p class="singer">Wis Khalifa ft. Charlie Puth</p>
+            </figcaption>
+            <audio controls>
+              <source
+                src="Musiz Wiz Khalifa See You Again ft. Charlie Puth (256k).ogg"
+                type="audio/ogg"
+              />
+              <source
+                src="Musiz Wiz Khalifa See You Again ft. Charlie Puth (256k).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </figure>
+        </div>
+        <div class="music-items" style="background: rgb(134, 26, 18)">
+          <img class="img-music" src="Poster Sempurna.jpg" alt="Image" />
+          <figure class="song">
+            <figcaption>Sempurna</figcaption>
+            <figcaption>
+              <p class="singer">Andra and The Backbone</p>
+            </figcaption>
+            <audio controls>
+              <source
+                src="Music Rewrite The Stars James Arthur feat. Anne Marie (256k).ogg"
+                type="audio/ogg"
+              />
+              <source
+                src="Music Andra and The Backbone Sempurna (256k).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </figure>
+        </div>
+        <div class="music-items" style="background: rgb(94, 94, 94)">
+          <img class="img-music" src="Poster Karena Kamu.jpg" alt="Image" />
+          <figure class="song">
+            <figcaption>Karena Kamu</figcaption>
+            <figcaption><p class="singer">Geisha</p></figcaption>
+            <audio controls>
+              <source
+                src="Music Geisha Karena Kamu (256k).ogg"
+                type="audio/ogg"
+              />
+              <source
+                src="Music Geisha Karena Kamu (256k).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="video">
+      <figure class="video-items">
+        <video controls poster="Poster Oreo.jpg">
+          <source
+            src="Video Oreo Penuh Keajaiban 60s(1080p).webm"
+            type="video/webm"
+          />
+          <source
+            src="Video Oreo Penuh Keajaiban 60s(1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <figcaption>Oreo Penuh Keajaiban 60s</figcaption>
+      </figure>
+
+      <figure class="video-items">
+        <video controls poster="Poster Pocari Sweat.jpg">
+          <source
+            src="Video TVC POCARI SWEAT Bintang SMA (1080p).webm"
+            type="video/webm"
+          />
+          <source
+            src="Video TVC POCARI SWEAT Bintang SMA (1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <figcaption>TVC POCARI SWEAT Bintang SMA</figcaption>
+      </figure>
+
+      <figure class="video-items">
+        <video controls poster="Poster Pop Mie.jpg">
+          <source
+            src="Video Solo Traveling Seru ala @fani_twns di Pop Mie(1080p).webm"
+            type="video/webm"
+          />
+          <source
+            src="Video Solo Traveling Seru ala @fani_twns di Pop Mie(1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <figcaption>
+          Solo Traveling Seru ala @fani_twns di #BeautifulYearWithPopMie!
+        </figcaption>
+      </figure>
+
+      <figure class="video-items">
+        <video controls poster="Poster Khong Guan.jpg">
+          <source
+            src="Video Sebuah Kenangan Manis Khong Guan(1080p).webm"
+            type="video/webm"
+          />
+          <source
+            src="Video Sebuah Kenangan Manis Khong Guan(1080p).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <figcaption>Sebuah Kenangan Manis Khong Guan</figcaption>
+      </figure>
+    </section>
+
+    <div class="copyright">&copy; Copyright 2024 | Kesatria Koding 23</div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="ph ph-arrow-fat-line-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

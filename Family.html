@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .family-photo {
+      margin: 5rem 2rem 5rem 2rem;
+      background: #fff;
+      width: 700px;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: justify;
+    }
+
+    .family-photo img {
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .judul {
+      text-align: center;
+      color: black;
+    }
+  </style>
+  <body>
+    <nav>
+      <a onclick="home()">
+        <img
+          class="logo"
+          src="Logo Akprind University.png"
+          alt="AKPRIND University"
+        />
+      </a>
+
+      <div id="menu-icon" class="menu-icon">
+        <i class="ph ph-list"></i>
+      </div>
+
+      <ul id="menu-list" class="hidden">
+        <li>
+          <a onclick="home()" style="color: #0ef">Home</a>
+        </li>
+
+        <li>
+          <a onclick="biodata()">Biodata</a>
+        </li>
+        <li>
+          <a onclick="family()">Family</a>
+        </li>
+        <li>
+          <a onclick="program()">Program</a>
+        </li>
+        <li>
+          <a onclick="fun()">Fun</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="pilihan">
+      <button class="button-1" onclick="flyrizal()">Family 1</button>
+
+      <button class="button-1" onclick="flykemal()">Family 2</button>
+
+      <button class="button-1" onclick="flydinul()">Family 3</button>
+
+      <button class="button-1" onclick="flyaji()">Family 4</button>
+    </section>
+
+    <section id="rizal-family">
+      <div class="family-photo">
+        <img src="Family Rizal.jpg" alt="Family Photo Rizal" />
+        <h2 class="judul">Ahmad Rizal Family</h2>
+      </div>
+    </section>
+
+    <section id="kemal-family">
+      <div class="family-photo">
+        <img src="Family Kemal.jpg" alt="Family Photo Kemal" />
+        <h2 class="judul">Nasya Kemal Giffari Family</h2>
+      </div>
+    </section>
+
+    <section id="aji-family">
+      <div class="family-photo">
+        <img src="Family Aji.jpg" alt="Family Photo Aji" />
+        <h2 class="judul">Aji Nugroho Family</h2>
+      </div>
+    </section>
+
+    <section id="dinul-family">
+      <div class="family-photo">
+        <img src="Family Dinul.jpg" alt="Family Photo Dinul" />
+        <h2 class="judul">Dinul Hayat Family</h2>
+      </div>
+    </section>
+
+    <div class="copyright">&copy; Copyright 2024 | Kesatria Koding 23</div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="ph ph-arrow-fat-line-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

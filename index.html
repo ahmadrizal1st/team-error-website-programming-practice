@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_bio.css">
+  </head>
+
+  <body>
+    <nav>
+      <a onclick="home()">
+        <img
+          class="logo"
+          src="Logo Akprind University.png"
+          alt="AKPRIND University"
+        />
+      </a>
+
+      <div id="menu-icon" class="menu-icon">
+        <i class="ph ph-list"></i>
+      </div>
+
+      <ul id="menu-list" class="hidden">
+        <li>
+          <a onclick="home()" style="color: #0ef">Home</a>
+        </li>
+
+        <li>
+          <a onclick="biodata()">Biodata</a>
+        </li>
+        <li> 
+          <a onclick="family()">Family</a>
+        </li>
+        <li>
+          <a onclick="program()">Program</a>
+        </li>
+        <li>
+          <a onclick="fun()">Fun</a>
+        </li>
+      </ul>
+      
+    </nav>
+
+    <section class="pilihan">
+      
+        <button class="button-1" onclick="akreditasi()">Akreditasi</button>
+      
+        <button class="button-1" onclick="menu()">Menu</button>
+      
+        <button class="button-1" onclick="anggota()">Anggota</button>
+      
+    </section>
+    <section id="akreditasi">
+      <main>
+        <div class="container">
+          <div class="box">
+            <img src="Akreditasi Institusi Baik Sekali IST AKPRIND Yogyakarta.jpg" onclick="ig_akreditasi()" alt="Akreditasi"/>
+            <img src="Sertifikat Akreditasi Baik Sekali BAN-PT IST AKPRID Yogyakarta.jpg" onclick="ig_akreditasi()" alt="Akreditasi" class="hover-img"/>
+          </div>
+        </div>
+          
+        <br />
+        <h3>Universitas AKPRIND Yogyakarta Terakreditasi Baik Sekali</h3>
+        <br>
+        <p>Dalam menyelenggarakan pendidikan, Institut Sains & Teknologi AKPRIND Yogyakarta menerapakan sistem penjaminan mutu serta standar yang telah ditetapkan oleh pemerintah. Saat ini seluruh program studi yang ada di IST AKPRIND telah terakreditasi oleh Badan Akreditasi Nasional Perguruan Tinggi (BAN-PT). Begitu juga dengan Institusi, IST AKPRIND telah terakreditasi Institusi oleh BAN-PT sejak 19 Juli 2014.</p>
+        <br>
+        <p>Terhitung sejak tanggal 26 November 2019, IST AKPRIND terakreditasi dengan peringkat Akreditasi <b>“BAIK SEKALI”</b> berdasarkan keputusan BAN-PT No. 419/SK/BAN-PT/Akred/PT/XI/2019. IST AKPRIND merupakan PTS pertama di DIY yang menggunakan instrumen APT 3.0 dalam penilaian akreditasi dengan 9 kriteria.</p>
+        <br>
+        <p>Badan Akreditasi Nasional Perguruan Tinggi (BAN-PT) merupakan satu-satunya badan akreditasi yang memperoleh wewenang dari Kementerian Pendidikan dan Kebudayaan Republik Indonesia dalam meningkatkan mutu pendidikan tinggi, memperkenalkan serta menyebarluaskan Paradigma Baru dalam Pengelolaan Pendidikan Tinggi, dan meningkatkan relevansi, atmosfer akademik, pengelolaan institusi, efisiensi dan keberlanjutan pendidikan tinggi.</p>
+        <br>
+        <p>sumber : </p>
+        
+        
+      </main>
+    </section>
+    <section id="menu">
+      <main class="menu-inside">
+        <div class="list-menu">
+
+          <div class="outside-menu">
+            <ul><li>
+              <div class="text-menu">
+                <table>
+                  <tr>
+                    <th class="text-daftar-menu">
+                      MENU
+                    </th>
+                  </tr>
+                </table>
+              </div>
+            </li>
+    
+            <li>
+              <div class="inside-menu">
+                
+                  <div onclick="biodata()" class="in-inside-menu">
+                    <table>
+                      <tr>
+                        <th>
+                          Terdapat profil anggota di dalamnya terdiri atas:
+                          <ul>
+                            <li>Foto</li>
+                            <li>Minat</li>
+                            <li>Umur</li>
+                            <li>Asal</li>
+                            <li>Hobi</li>
+                            <li>Motivasi</li>
+                          </ul>
+                          <br>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="biodata()">Biodata Anggota</button>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                     
+                    </div>
+                
+                  <div onclick="family()" class="in-inside-menu">
+                    <table>
+                      <tr>
+                        <th>
+                          Terdapat profil keluarga anggota:
+                          <ul>
+                            <li>Ahmad Rizal</li>
+                            <li>Nasya Kemal Giffari</li>
+                            <li>Aji Nugroho</li>
+                            <li>Dinul Hayat</li>
+                          </ul>
+                          <br><br><br>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="family()">Profil Keluarga</button>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                
+                  <div onclick="program()" class="in-inside-menu">
+                    <table>
+                      <tr>
+                        <th>
+                          Program ini memiliki fungsi membalikkan kata, mencari bilangan prima, dan menentukan kata atau kalimat palindrom.
+                          <br><br><br><br><br>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="program()">Latihan Pemrograman</button>
+                              
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                
+                  <div onclick="fun()" class="in-inside-menu">
+                    <table>
+                      <tr>
+                        <th>
+                          Terdapat musik dan video didalamnya saya harap anda dapat menikmatiknya. <br><br><br><br><br><br><br>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                        
+                            <button class="button-1" onclick="fun()">Have Fun</button>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+            </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <section id="anggota">
+      <main class="menu-inside">
+        <div class="list-menu">
+
+          <div class="outside-anggota">
+            <ul><li>
+              <div class="text-anggota">
+                <table>
+                  <tr>
+                    <th class="text-daftar-anggota">
+                      DAFTAR ANGGOTA
+                    </th>
+                  </tr>
+                </table>
+              </div>
+                
+            </li>
+            <li>
+              <div class="inside-anggota">
+                
+                  <div onclick="bio1()" class="type-1 type-1A">
+                    <table>
+                      <tr>
+                        <th>
+                          <img src="Foto Rizal.jpg" alt="Rizal Photo" class="profile-photo" />
+                          <p class="nim">NIM : 231057014</p>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="bio1()">Profil Rizal</button>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                     
+                    </div>
+                
+                  <div onclick="bio2()" class="type-1 type-1B">
+                    <table>
+                      <tr>
+                        <th>
+                          <img src="Foto Kemal.jpg" alt="Kemal Photo" class="profile-photo" />
+                          <p class="nim">NIM : 231054009</p>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="bio2()">Profil Kemal</button>
+                              
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div onclick="bio3()" class="type-1 type-1D">
+                    <table>
+                      <tr>
+                        <th>
+                          <img src="Foto Aji.jpg" alt="Aji Photo" class="profile-photo" />
+                          <p class="nim">NIM : 231057014</p>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="bio3()">Profil Aji</button>
+                              
+                        </td>
+                      </tr>
+                    </table>
+                  </div> 
+                
+                  <div onclick="bio4()" class="type-1 type-1C">
+                    <table>
+                      <tr>
+                        <th>
+                          <img src="Foto Dinul.jpg" alt="Dinul Photo" class="profile-photo" />
+                          <p class="nim">NIM : 231058026</p>
+                        </th>
+                      </tr>
+
+
+                      <tr class="table-button">
+                        <td>
+                          
+                            <button class="button-1" onclick="bio4()">Profil Dinul</button>
+                              
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                               
+              </div>
+            </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <div class="copyright">&copy; Copyright 2024 | Kesatria Koding 23</div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="ph ph-arrow-fat-line-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>

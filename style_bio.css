@@ -1,0 +1,49 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tema {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-photo:hover {
+  filter: grayscale(100%);
+}
+
+.identity {
+  margin-top: 20px;
+}
+
+h1,
+p {
+  margin: 5px 0;
+}
+
+.p {
+  text-align: justify;
+}
+
+.about {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+h2 {
+  color: #333;
+}
