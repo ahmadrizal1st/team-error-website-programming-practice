@@ -6,71 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biodata</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <style>
-    iframe {
-      width: 90%;
-      height: 700px;
-    }
-
-    section {
-      gap: 15px;
-    }
-  </style>
-  <body>
-    <nav>
-      <a onclick="home()">
+  <body class="bg-gray-100 text-gray-800">
+    <nav class="flex items-center justify-between p-4 bg-blue-600 text-white">
+      <a onclick="home()" class="cursor-pointer">
         <img
-          class="logo"
+          class="h-12"
           src="Logo Akprind University.png"
           alt="AKPRIND University"
         />
       </a>
 
-      <div id="menu-icon" class="menu-icon">
-        <i class="ph ph-list"></i>
+      <div id="menu-icon" class="menu-icon cursor-pointer">
+        <i class="ph ph-list text-2xl"></i>
       </div>
 
-      <ul id="menu-list" class="hidden">
+      <ul id="menu-list" class="hidden flex flex-col md:flex-row gap-4">
         <li>
-          <a onclick="home()" style="color: #0ef">Home</a>
-        </li>
-
-        <li>
-          <a onclick="biodata()">Biodata</a>
+          <a onclick="home()" class="text-cyan-400 cursor-pointer">Home</a>
         </li>
         <li>
-          <a onclick="family()">Family</a>
+          <a onclick="biodata()" class="cursor-pointer">Biodata</a>
         </li>
         <li>
-          <a onclick="program()">Program</a>
+          <a onclick="family()" class="cursor-pointer">Family</a>
         </li>
         <li>
-          <a onclick="fun()">Fun</a>
+          <a onclick="program()" class="cursor-pointer">Program</a>
+        </li>
+        <li>
+          <a onclick="fun()" class="cursor-pointer">Fun</a>
         </li>
       </ul>
     </nav>
 
-    <section class="pilihan">
-      <button class="button-1" onclick="bio1()">Anggota 1</button>
-
-      <button class="button-1" onclick="bio2()">Anggota 2</button>
-
-      <button class="button-1" onclick="bio3()">Anggota 3</button>
-
-      <button class="button-1" onclick="bio4()">Anggota 4</button>
+    <section class="pilihan flex flex-wrap justify-center gap-4 my-6">
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        onclick="bio1()"
+      >
+        Anggota 1
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        onclick="bio2()"
+      >
+        Anggota 2
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        onclick="bio3()"
+      >
+        Anggota 3
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        onclick="bio4()"
+      >
+        Anggota 4
+      </button>
     </section>
 
-    <section class="iframe-container">
-      <iframe src="isi_riwayat3.html" frameborder="0" allowfullscreen></iframe>
+    <section class="iframe-container flex justify-center my-6">
+      <iframe
+        src="isi_riwayat3.html"
+        class="w-11/12 h-[700px] rounded-lg border"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </section>
 
-    <div class="copyright">&copy; Copyright 2024 | Kesatria Koding 23</div>
+    <div class="copyright text-center py-4 text-gray-600">
+      &copy; Copyright 2024 | Kesatria Koding 23
+    </div>
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()">
-      <i class="ph ph-arrow-fat-line-up"></i>
+    <button
+      id="scrollToTopBtn"
+      onclick="scrollToTop()"
+      class="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
+    >
+      <i class="ph ph-arrow-fat-line-up text-xl"></i>
     </button>
 
     <script src="script.js"></script>
