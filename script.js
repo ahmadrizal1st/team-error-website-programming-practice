@@ -1,75 +1,105 @@
-// Wait for the DOM to load
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the container where the form will be added
+document.addEventListener("DOMContentLoaded", () => {
     const formContainer = document.getElementById("form-container");
 
-    // Create a form element
+    // Create form
     const form = document.createElement("form");
-    form.setAttribute("id", "biodataForm");
+    form.id = "biodataForm";
+    form.style.maxWidth = "400px";
+    form.style.margin = "auto";
+    form.style.padding = "20px";
+    form.style.border = "1px solid #ccc";
+    form.style.borderRadius = "8px";
+    form.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    form.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
 
-    // Create a title for the form
+    // Create form title
     const title = document.createElement("h2");
+    title.textContent = "Biodata Form";
     title.style.textAlign = "center";
     title.style.marginBottom = "20px";
     title.style.color = "#4CAF50";
-    title.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
     title.style.fontSize = "24px";
     title.style.textTransform = "uppercase";
-    title.style.letterSpacing = "2px";
-    title.textContent = "Biodata Form";
+    title.style.letterSpacing = "1.5px";
     form.appendChild(title);
 
-    // Function to create input fields
-    function createInputField(labelText, inputType, inputName) {
-        const div = document.createElement("div");
-        div.style.marginBottom = "10px";
+    /**
+     * Helper function to create input fields
+     */
+    const createInputField = (labelText, inputType, inputName) => {
+        const fieldWrapper = document.createElement("div");
+        fieldWrapper.style.marginBottom = "15px";
+        fieldWrapper.style.display = "flex";
+        fieldWrapper.style.flexDirection = "column";
 
         const label = document.createElement("label");
-        label.textContent = labelText;
         label.setAttribute("for", inputName);
-        div.appendChild(label);
+        label.textContent = labelText;
+        label.style.marginBottom = "5px";
+        label.style.fontWeight = "bold";
 
         const input = document.createElement("input");
-        input.setAttribute("type", inputType);
-        input.setAttribute("name", inputName);
-        input.setAttribute("id", inputName);
-        input.style.marginLeft = "10px";
-        div.appendChild(input);
+        input.type = inputType;
+        input.name = inputName;
+        input.id = inputName;
+        input.required = true;
+        input.style.padding = "8px";
+        input.style.border = "1px solid #ccc";
+        input.style.borderRadius = "4px";
 
-        return div;
-    }
+        fieldWrapper.appendChild(label);
+        fieldWrapper.appendChild(input);
 
-    // Add input fields to the form
-    form.appendChild(createInputField("Full Name:", "text", "fullName"));
-    form.appendChild(createInputField("Email:", "email", "email"));
-    form.appendChild(createInputField("Phone Number:", "tel", "phoneNumber"));
-    form.appendChild(createInputField("Date of Birth:", "date", "dob"));
+        return fieldWrapper;
+    };
 
-    // Create a submit button
+    // Add input fields
+    const fields = [
+        { label: "Full Name", type: "text", name: "fullName" },
+        { label: "Email", type: "email", name: "email" },
+        { label: "Phone Number", type: "tel", name: "phoneNumber" },
+        { label: "Date of Birth", type: "date", name: "dob" }
+    ];
+
+    fields.forEach(field =>
+        form.appendChild(createInputField(field.label, field.type, field.name))
+    );
+
+    // Submit button
     const submitButton = document.createElement("button");
-    submitButton.setAttribute("type", "submit");
+    submitButton.type = "submit";
     submitButton.textContent = "Submit";
-    form.appendChild(submitButton);
+    submitButton.style.padding = "10px";
+    submitButton.style.width = "100%";
+    submitButton.style.marginTop = "10px";
+    submitButton.style.backgroundColor = "#4CAF50";
+    submitButton.style.color = "white";
+    submitButton.style.border = "none";
+    submitButton.style.borderRadius = "4px";
+    submitButton.style.fontSize = "16px";
+    submitButton.style.cursor = "pointer";
 
-    // Append the form to the container
+    submitButton.addEventListener("mouseover", () => {
+        submitButton.style.backgroundColor = "#45a049";
+    });
+
+    submitButton.addEventListener("mouseout", () => {
+        submitButton.style.backgroundColor = "#4CAF50";
+    });
+
+    form.appendChild(submitButton);
     formContainer.appendChild(form);
 
-    // Add a submit event listener
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
+    // Handle form submission
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-        // Collect form data
         const formData = new FormData(form);
-        const biodata = {};
-        formData.forEach((value, key) => {
-            biodata[key] = value;
-        });
+        const biodata = Object.fromEntries(formData.entries());
 
-        // Display the collected data
         alert(`Biodata Submitted:\n${JSON.stringify(biodata, null, 2)}`);
         console.log("Biodata Submitted:", biodata);
 
-        // Clear the form
         form.reset();
     });
 });
